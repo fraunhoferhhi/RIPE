@@ -2,7 +2,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ["project-page"]
+    branches: ["project_page"]
   workflow_dispatch:
 
 permissions:
@@ -28,7 +28,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './project-page/'
+          path: './project_page/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
