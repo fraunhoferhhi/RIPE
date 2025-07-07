@@ -1,0 +1,33 @@
+_target_: ripe.data.datasets.dataset_combinator.DatasetCombinator
+mode: custom
+weights:
+  - 0.2
+  - 0.8
+datasets:
+  - _target_: ripe.data.datasets.acdc.ACDC
+    root: ${oc.env:DATA_DIR}/ACDC
+    stage: train
+    condition: all
+    transforms:
+      _target_: ripe.data.data_transforms.Compose
+      transforms:
+        - _target_: ripe.data.data_transforms.Normalize
+          mean: [0.485, 0.456, 0.406]
+          std: [0.229, 0.224, 0.225]
+        - _target_: ripe.data.data_transforms.Crop # to remove the car hood from some images
+          crop_height: 896
+          crop_width: 1920
+        - _target_: ripe.data.data_transforms.ResizeAndPadWithHomography
+          target_size_longer_side: 560
+  - _target_: ripe.data.datasets.disk_megadepth.DISK_Megadepth
+    root: ${oc.env:DATA_DIR}/disk-data
+    stage: train
+    max_scene_size: 10000
+    transforms:
+      _target_: ripe.data.data_transforms.Compose
+      transforms:
+        - _target_: ripe.data.data_transforms.Normalize
+          mean: [0.485, 0.456, 0.406]
+          std: [0.229, 0.224, 0.225]
+        - _target_: ripe.data.data_transforms.ResizeAndPadWithHomography
+          target_size_longer_side: 560
