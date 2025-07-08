@@ -11,7 +11,7 @@
   <h2 align="center"><p>
     <a href="https://arxiv.org/abs/2507.04839" align="center">Arxiv</a> | 
     <a href="https://fraunhoferhhi.github.io/RIPE/" align="center">Project Page</a> |
-    <a href="???" align="center">🤗Demo🤗</a>
+    <a href="https://huggingface.co/spaces/JohannesK14/RIPE" align="center">🤗Demo🤗</a>
   </p></h2>  
   <div align="center"></div>
 </p>
