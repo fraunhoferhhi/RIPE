@@ -356,8 +356,12 @@ Our project webpage is based on the [Acadamic Project Page Template](https://git
 ## BibTex Citation
 
 ```
-@inproceedings{kunzel2025ripe,
-  title={RIPE: Reinforcement Learning on Unlabeled Image Pairs for Robust Keypoint Extraction},
-  author={Künzel, Johannes and Hilsmann, Anna and Eisert, Peter},
+
+@article{ripe2025, 
+year = {2025}, 
+title = {{RIPE: Reinforcement Learning on Unlabeled Image Pairs for Robust Keypoint Extraction}}, 
+author = {Künzel, Johannes and Hilsmann, Anna and Eisert, Peter}, 
+journal = {arXiv}, 
+eprint = {2507.04839}, 
 }
 ```
