@@ -24,7 +24,7 @@
 
 ## Setup
 
-💡**Alternative**💡 Install nothing locally and try our Hugging Face demo: [🤗Demo🤗](https://huggingface.co/spaces/RIPE/RIPE)
+💡**Alternative**💡 Install nothing locally and try our Hugging Face demo: [🤗Demo🤗](https://huggingface.co/spaces/JohannesK14/RIPE)
 
 1. Install mamba by following the instructions given here: [Mamba Installation](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html)
 
