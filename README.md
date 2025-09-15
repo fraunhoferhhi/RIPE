@@ -281,11 +281,11 @@ DATA_DIR="/data"
     </details>
 
     <details>
-    <summary>Tokyo 24/7 Query Images</summary>
+    <summary>Tokyo 24/7</summary>
 
     - ⚠️**Optional**⚠️: Only if you are interest in the model used in Section 4.6 of the paper!
     - Download the Tokyo 24/7 query images from here: [Tokyo 24/7 Query Images V3](http://www.ok.ctrl.titech.ac.jp/~torii/project/247/download/247query_v3.zip) from the official [website](http://www.ok.ctrl.titech.ac.jp/~torii/project/247/_).
-    - extract them into data/Tokyo_Query_V3
+    - extract them into data/Tolyo_Query_V3
 
     ```bash
     Tokyo_Query_V3/
