@@ -96,6 +96,23 @@ plt.show()
 
 ### MegaDepth 1500 & HPatches
 
+1. Clone our [Glue Factory Fork](https://github.com/JohannesK14/glue-factory)
+```bash
+git clone https://github.com/JohannesK14/glue-factory
+```
+
+2. Run the evaluation
+```bash
+cd glue-factory
+
+uv sync
+uv run python -m gluefactory.eval.megadepth1500 --conf ripe+NN
+uv run python -m gluefactory.eval.hpatches --conf ripe+NN
+```
+
+<details>
+<summary>Former Instructions</summary>
+
 1. Download and install [Glue Factory](https://github.com/cvg/glue-factory)
 2. Add this repo as a submodule to Glue Factory:
 ```bash
@@ -234,7 +251,14 @@ git submodule add https://github.com/fraunhoferhhi/RIPE.git thirdparty/ripe
 python -m gluefactory.eval.megadepth1500 --conf ripe+NN # for MegaDepth 1500
 ```
 
-Should result in: 
+6. Run the HPatches evaluation script:
+
+```bash
+python -m gluefactory.eval.hpatches --conf ripe+NN # for HPatches
+```
+</details>
+
+MegaDepth1500 should result in: 
 
 ```bash
 'rel_pose_error@10°': 0.6834,
@@ -242,13 +266,7 @@ Should result in:
 'rel_pose_error@5°': 0.5511,
 ```
 
-6. Run the HPatches evaluation script:
-
-```bash
-python -m gluefactory.eval.hpatches --conf ripe+NN # for HPatches
-```
-
-Should result in:
+HPatches should result in:
 
 ```bash
 'H_error_ransac@1px': 0.3793,
@@ -264,6 +282,7 @@ Should result in:
 ```bash
 OUTPUT_DIR="/output"
 DATA_DIR="/data"
+SLURM_JOB_ID="DESKTOP"
 ```
 
 2. Download the required datasets:
@@ -356,12 +375,13 @@ Our project webpage is based on the [Acadamic Project Page Template](https://git
 ## BibTex Citation
 
 ```
-
-@article{ripe2025, 
-year = {2025}, 
-title = {{RIPE: Reinforcement Learning on Unlabeled Image Pairs for Robust Keypoint Extraction}}, 
-author = {Künzel, Johannes and Hilsmann, Anna and Eisert, Peter}, 
-journal = {arXiv}, 
-eprint = {2507.04839}, 
-}
+@inproceedings{ripe_kuenzel_2025,
+  author={Künzel, Johannes and Hilsmann, Anna and Eisert, Peter},
+  booktitle={2025 IEEE/CVF International Conference on Computer Vision (ICCV)}, 
+  title={RIPE: Reinforcement Learning on Unlabeled Image Pairs for Robust Keypoint Extraction}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={4868-4877},
+  doi={10.1109/ICCV51701.2025.00463}}
 ```
