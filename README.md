@@ -282,6 +282,7 @@ HPatches should result in:
 ```bash
 OUTPUT_DIR="/output"
 DATA_DIR="/data"
+SLURM_JOB_ID="DESKTOP"
 ```
 
 2. Download the required datasets:
