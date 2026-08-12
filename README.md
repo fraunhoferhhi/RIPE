@@ -96,6 +96,23 @@ plt.show()
 
 ### MegaDepth 1500 & HPatches
 
+1. Clone our [Glue Factory Fork](https://github.com/JohannesK14/glue-factory)
+```bash
+git clone https://github.com/JohannesK14/glue-factory
+```
+
+2. Run the evaluation
+```bash
+cd glue-factory
+
+uv sync
+uv run python -m gluefactory.eval.megadepth1500 --conf ripe+NN
+uv run python -m gluefactory.eval.hpatches --conf ripe+NN
+```
+
+<details>
+<summary>Former Instructions</summary>
+
 1. Download and install [Glue Factory](https://github.com/cvg/glue-factory)
 2. Add this repo as a submodule to Glue Factory:
 ```bash
@@ -234,7 +251,14 @@ git submodule add https://github.com/fraunhoferhhi/RIPE.git thirdparty/ripe
 python -m gluefactory.eval.megadepth1500 --conf ripe+NN # for MegaDepth 1500
 ```
 
-Should result in: 
+6. Run the HPatches evaluation script:
+
+```bash
+python -m gluefactory.eval.hpatches --conf ripe+NN # for HPatches
+```
+</details>
+
+MegaDepth1500 should result in: 
 
 ```bash
 'rel_pose_error@10°': 0.6834,
@@ -242,13 +266,7 @@ Should result in:
 'rel_pose_error@5°': 0.5511,
 ```
 
-6. Run the HPatches evaluation script:
-
-```bash
-python -m gluefactory.eval.hpatches --conf ripe+NN # for HPatches
-```
-
-Should result in:
+HPatches should result in:
 
 ```bash
 'H_error_ransac@1px': 0.3793,
