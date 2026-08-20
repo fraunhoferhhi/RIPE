@@ -15,6 +15,10 @@
   </p></h2>  
   <div align="center"></div>
 </p>
+
+> [!IMPORTANT]
+> 📢 **Check out our new paper [RIPE++](https://github.com/fraunhoferhhi/RIPEpp)!** 📢
+
 <br/>
 <p align="center">
     <img src="assets/teaser_image.png" alt="example" width=80%>
